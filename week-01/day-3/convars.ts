@@ -28,3 +28,25 @@ if (b>20){
 
 console.log(out2);
 
+let c: number = 123;
+let credits: number = 100;
+let isBonus: boolean = false;
+
+if (credits>=50 && isBonus==false){
+
+    c-=2;
+
+}
+
+else if (credits<50 && isBonus==false){
+
+    c--;
+
+}
+
+else{
+
+    c=c;
+}
+
+console.log(c);
