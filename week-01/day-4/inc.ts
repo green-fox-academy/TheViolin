@@ -4,12 +4,12 @@
 
 let numList:number[]=[1,2,3,4,5];
 
-let newList=numList.map((element)=>{
+let newList=numList.map((element,index,array)=>{
     if (element==3){
-        return element= 4;
+        return element= numList[2]+1;
     }
     else {
        return element;
     }
     })
-    console.log (newList);
+    console.log (newList[2]);
