@@ -4,5 +4,6 @@
 
 let quote: string = 'Hofstadter\'s Law: It you expect, even when you take into account Hofstadter\'s Law.'
 let newQuote= quote.slice(0, 20) + " always takes longer than" + quote.slice(20);
+quote=newQuote;
 
-console.log(newQuote);
+console.log(quote);
