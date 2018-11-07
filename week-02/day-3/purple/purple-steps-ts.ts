@@ -12,10 +12,13 @@ function center(x,y,widht,height){
   
   ctx.beginPath ();
   ctx.fillStyle = `purple`;
-  ctx.fillRect (x,y,widht,height);
+  ctx.strokeStyle = 'black';
+  ctx.fillRect (x,y,widht,height)
+  ctx.strokeRect (x,y,widht,height);
+  
 
   ctx.fill();
-
+  ctx.stroke();
 }
 for (let i=0; i<19; i++){
 center(10+i*10, 10+i*10, 10, 10); 
