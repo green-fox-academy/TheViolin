@@ -10,16 +10,16 @@ const ctx = canvas.getContext('2d');
 
 
 ctx.beginPath ();
-ctx.moveTo (200,100);
-ctx.lineTo (300,100);
+ctx.moveTo (250,200);
+ctx.lineTo (350,200);
 
 ctx.strokeStyle = 'red';
 ctx.stroke();
 
 
 ctx.beginPath ();
-ctx.moveTo (100,300);
-ctx.lineTo (100,380);
+ctx.moveTo (300,150);
+ctx.lineTo (300,250);
 
 ctx.strokeStyle = 'green';
 ctx.stroke();
