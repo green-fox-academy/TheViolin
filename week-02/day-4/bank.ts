@@ -28,15 +28,14 @@ const accounts: any[] = [
 //]
 
 
-function getNameAndBalance(accounts) {
-  let nameAndBalance=[];
+function element(accountNumber) {
 
-  for (let i = 0; i < accounts.length; i++) {
-    if (accounts[i]['clientName']) {
-      nameAndBalance.push (accounts[i]['clientName']),
-      nameAndBalance.push (accounts[i]['accountNumber'])
-    }
-  }
-  return nameAndBalance;
+  let array = [];
+  let obj = accounts.find(element => element.accountNumber === accountNumber);
+
+  array.push(obj.clientName);
+  array.push(obj.balance);
+
+  return array;
 }
-console.log(getNameAndBalance(accounts));
+ console.log(element(23456311))
