@@ -7,11 +7,11 @@ let listOfNumbers: number[] = [2, 4, 6, 8, 10, 12, 14, 16];
 let newList: number []= [4,8,12,16];
 
 
-function arrayContainsAnotherArray(listOfNumbers, newList){
+function checkNums(listOfNumbers){
   for(var i = 0; i < newList.length; i++){
     if(listOfNumbers.indexOf(newList[i]) === -1)
        return false;
   }
   return true;
 }
-console.log (arrayContainsAnotherArray(listOfNumbers,newList));
+console.log (checkNums(listOfNumbers));;
