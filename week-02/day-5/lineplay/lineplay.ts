@@ -1,21 +1,28 @@
-'use strict';
+"use strict";
 
-const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".main-canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
 
-for (let i = 0; i <= canvas.width; i += 20){
+// DO NOT TOUCH THE CODE ABOVE THIS LINE
 
-  drawLine ([i, 0],[canvas.width, i], 'purple');
-  drawLine ([0, i], [i, canvas.height], 'green');
+function drawEnvelopeStar(lineDistance) {
+  for (let repLines = 0; repLines < canvas.width; repLines += lineDistance) {
+    ctx.beginPath();
+    ctx.strokeStyle = 'purple';
 
+    ctx.moveTo(0+repLines, 0);
+    ctx.lineTo(canvas.width, repLines);
+   
+    ctx.stroke(); 
+
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'green';
+
+    ctx.moveTo(canvas.width-repLines, canvas.width);
+    ctx.lineTo(0, canvas.width-repLines);
+
+    ctx.stroke(); 
+  }
 }
-
-function drawLine (from, to, color){
-
-  ctx.strokeStyle = color;
-  ctx.beginPath();
-  ctx.moveTo(from[0], from[1]);
-  ctx.lineTo(to[0], to[1]);
-  ctx.stroke();
-  
-}
+drawEnvelopeStar(20);
