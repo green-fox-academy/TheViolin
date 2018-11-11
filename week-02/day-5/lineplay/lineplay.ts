@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 
-function drawEnvelopeStar(lineDistance) {
+function lineplay(lineDistance) {
   for (let repLines = 0; repLines < canvas.width; repLines += lineDistance) {
     ctx.beginPath();
     ctx.strokeStyle = 'purple';
@@ -25,4 +25,4 @@ function drawEnvelopeStar(lineDistance) {
     ctx.stroke(); 
   }
 }
-drawEnvelopeStar(20);
+lineplay(20);
