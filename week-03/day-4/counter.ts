@@ -1,11 +1,13 @@
-function counter(num: number): number {
-  let n= 33;
-  if (num <= 0) { 
-    return n;
+
+export{ };
+
+function counter(n: number): number {
+  if (n <= 1) { 
+    return 1;
   }
   else {
-    return n - num ;
+    return n - 1;
   }
 }
 
-console.log( counter(22));
+console.log(counter(5));
