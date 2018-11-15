@@ -2,11 +2,11 @@
 export{ };
 
 function counter(n: number): number {
-  if (n <= 0) { 
+  if (n <= 1) { 
     return 0;
   }
   else {
-    return n - 1;
+    return counter (n - 1);
   }
 }
 
