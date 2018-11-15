@@ -1,12 +1,12 @@
 export{ };
 
-function counter(n: number): number {
-  if (n <= 0) { 
+function adder(n: number): number {
+  if (n < 0) { 
     return 0;
   }
   else {
-    return n + 1;
+    return n+adder(n-1);
   }
 }
 
-console.log(counter(5));
+console.log(adder(5));
