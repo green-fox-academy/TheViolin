@@ -1,10 +1,11 @@
 function counter(num: number): number {
-  if (num <= 1) { 
-    return 1;
+  let n= 33;
+  if (num <= 0) { 
+    return n;
   }
   else {
-    return num + 1;
+    return n - num ;
   }
 }
 
-console.log('67 + 1 = ', counter(67));
+console.log( counter(22));
