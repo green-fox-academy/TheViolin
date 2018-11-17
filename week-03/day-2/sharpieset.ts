@@ -27,7 +27,7 @@ class SharpieSet {
   }
   removeTrash(): any{
     for (let i = 0; i < this.listOfSharpie.length; i++) {
-      if (this.listOfSharpie[i].inkAmount === 0) { //if-nél feltételbe mindig 3 egyenlőség jel
+      if (this.listOfSharpie[i].inkAmount === 0) { 
         this.listOfSharpie.splice(i, 1);
       } 
     } return this.listOfSharpie
@@ -44,4 +44,4 @@ console.log (SharpieSt.countUsable());
 console.log (SharpieSt.removeTrash());
 
 
- // létre kell hozni egy új új sharpiesettet, hogy bele tudjam pusholna a sharpiekat (class)
+ 
