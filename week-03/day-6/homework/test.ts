@@ -17,7 +17,10 @@ people.push(gandhi);
 let mentor = new Mentor();
 people.push(mentor);
 let sponsor = new Sponsor();
+people.push(sponsor);
 let elon = new Sponsor('Elon Musk', 46, 'male', 'SpaceX');
+people.push(elon);
+
 
 student.skipDays(3);
 
