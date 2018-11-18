@@ -21,8 +21,9 @@ class Student {
   introduce() {
     console.log(`Hi, I\'m ${this.name} a ${this.age} old ${this.gender} from ${this.previousOrganization} who skipped ${this.skippedDays} days from the course already.`)
   }
-  skipDays(numberOfDays) {
-    return this.skipDays + numberOfDays;
+  skipDays(numberOfDays: number) {
+    return this.skippedDays += numberOfDays;
   }
 }
 
+export { Student };

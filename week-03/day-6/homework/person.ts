@@ -17,4 +17,4 @@ class Person {
     console.log('My goal is: Live for the moment!')
   }
 }
-
+export { Person };

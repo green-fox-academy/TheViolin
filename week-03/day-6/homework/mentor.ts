@@ -20,3 +20,5 @@ class Mentor {
     console.log((`Hi, I'm ${this.name} a ${this.age} old ${this.gender} ${this.level} mentor.`))
   }
 }
+
+export { Mentor };

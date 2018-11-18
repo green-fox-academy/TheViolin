@@ -8,13 +8,13 @@ class Sponsor {
   company: string;
   hiredStudents: number;
 
-  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', company: string = 'Google', hiredStudents: number = 0) {
+  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', company: string = 'Google') {
 
     this.name = name;
     this.age = age;
     this.gender = gender;
     this.company = company;
-    this.hiredStudents = hiredStudents;
+    this.hiredStudents = 0;
   }
 
   introduce() {
@@ -28,3 +28,4 @@ class Sponsor {
   }
 }
 
+export { Sponsor }
