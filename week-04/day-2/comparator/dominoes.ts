@@ -23,4 +23,4 @@ dominoes.sort(function (a: Domino, b: Domino): number {
   return a.compareTo(b);
 });
 
-console.log(print(dominoes));
+print(dominoes)
