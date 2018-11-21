@@ -1,5 +1,5 @@
 interface Flyable {
-  land (): void;
+  land(): void;
   fly(): void;
   takeOff(): void;
 }

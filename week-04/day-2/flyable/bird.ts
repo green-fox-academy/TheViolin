@@ -1,6 +1,7 @@
 import { Animal } from "./animal";
+import { Flyable } from "./flyable";
 
-class Bird extends Animal {
+class Bird extends Animal implements Flyable {
 
   constructor(name: string, age: number = 20) {
     super(name, age);
@@ -9,7 +10,17 @@ class Bird extends Animal {
     return this.name;
   }
   breed() {
-    return 'laying eggs.';
+    return 'laying eggs';
+  }
+  land() {
+    return 'chipchip'
+  }
+  fly() {
+    return 'chipchirip'
+  }
+  takeOff() {
+    return 'chipchiripchirip'
+
   }
 }
 
