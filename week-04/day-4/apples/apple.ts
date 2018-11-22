@@ -1,3 +1,3 @@
-export function getApple(){
+export function getApple() {
   return 'apple'
 }
