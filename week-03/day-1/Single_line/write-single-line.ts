@@ -11,7 +11,7 @@ function writeToFile(fileName: string, data: string): void {
   if (fs.existsSync(fileName)) {
     fs.writeFileSync(fileName, data);
   } else {
-    console.log(`Unable to read file:${fileName}`);
+    console.log(`Unable to write file:${fileName}`);
   }
 }
 
