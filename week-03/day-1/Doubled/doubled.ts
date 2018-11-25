@@ -11,25 +11,17 @@ function readFromFile(fileName: string): string {
   }
 }
 
-function deleteDoubled(fileName: string) {
+function deleteDoubled(fileName: string): string {
   let fileContent: string[] = readFromFile(fileName).split('');
   let minusDoubled: string[] = [];
 
-  fileContent.forEach(function (e, i) {
+  fileContent.forEach(function (e, i): void{
     if (i % 2 !== 0) {
       minusDoubled.push(e);
     }
 
   })
   return minusDoubled.join('');
-
-  //first solution:
-  /*for (let i = 0; i <= fileContent.length; i++) {
-    if (i % 2 !== 0) {
-      minusDoubled.push(fileContent[i]);
-    }
-   
-  } return minusDoubled.join('');*/
 
 }
 console.log(deleteDoubled("duplicated-chars.txt"));
