@@ -11,11 +11,11 @@ function readFromFile(fileName: string): string {
   }
 }
 
-function deleteDoubled(fileName: string): string {
+function deleteDoubled(fileName: string) {
   let fileContent: string[] = readFromFile(fileName).split('');
   let minusDoubled: string[] = [];
 
-  fileContent.forEach(function (e, i): void{
+  fileContent.forEach(function (e, i) {
     if (i % 2 !== 0) {
       minusDoubled.push(e);
     }
