@@ -1,0 +1,19 @@
+.wrapper{
+  width: 100%;
+  max-width: 857px;
+  margin: 0 auto;
+}
+.container{
+  width: 857px;
+  display: flex;
+  flex-direction: row;
+  height: 385px;
+  background: #FFD62A;
+  justify-content: center;
+  align-content: center;
+}
+.purple{
+  background:#B02AFF;
+  width: 150px;
+  height: 150px;
+}
