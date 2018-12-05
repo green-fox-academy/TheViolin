@@ -1,27 +1,23 @@
-
-
 .wrapper{
   width: 100%;
-  max-width: 675px;
+  max-width: 857px;
   margin: 0 auto;
-
 }
-
 .container{
   display: flex;
 }
 
 .item{
-  flex-basis: 675px;
   height: 200px;
   color: green;
+  flex-grow: 1;
 }
-
 .green{
   background:#51D400;
 }
 .yellow{
   background:#FFD62A;
+  flex-grow: 2;
 }
 .purple{
   background:#B02AFF;
