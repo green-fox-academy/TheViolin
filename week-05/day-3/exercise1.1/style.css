@@ -1,0 +1,28 @@
+
+
+.wrapper{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+
+.container{
+  display: flex;
+}
+
+.item{
+  flex-basis: 675px;
+  height: 295px;
+  color: green;
+}
+
+.green{
+  background:#51D400;
+}
+.yellow{
+  background:#FFD62A;
+}
+.purple{
+  background:#B02AFF;
+}
