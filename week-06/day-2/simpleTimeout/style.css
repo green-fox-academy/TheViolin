@@ -1,0 +1,7 @@
+#apple{
+  opacity: 0;
+}
+
+#apple.show{
+  opacity: 1;
+}
