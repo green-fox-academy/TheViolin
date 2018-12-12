@@ -6,7 +6,6 @@ let photoSize = 200;
 
 buttons.addEventListener('click', event => {
   let direction = event.target.dataset.direction;
-  let width = 500;
   if (direction === 'in') {
     photoSize += 10;
     photo.style.backgroundSize = `${photoSize}%`;
