@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bp = require('body-parser');
 
 const app = express();
 const PORT = 8080;
@@ -30,7 +31,7 @@ app.get('/greeter', (req, res) => {
     })
   } else if (req.query.name) {
     res.send({
-      
+
       "error": "Please provide a title!"
     })
   }else {
@@ -39,6 +40,49 @@ app.get('/greeter', (req, res) => {
     })
   }
 });
+
+app.get('/appenda/:appended', (req, res) => {
+  if(!req.params.appended){
+    res.send({
+      "appended": "Please provide an input"
+    })
+  } 
+});
+
+app.use(bp());
+
+app.post('/dountil/:action', (req, res) => {
+  const{action}=req.params
+  if(action=== 'sum'){
+    res.json({
+      "result": sum(req.body.until)
+    });
+  } else if(action === 'factor'){
+    res.json({
+      "result": factor(req.body.until)
+    });
+  } else {
+    res.json({
+      "error": "Please provide a number!"
+    })
+  }
+})
+
+let sum = (number) =>{
+  let sums = 0;
+  for (let i = number; i >= 0; i--){
+    sums += number;
+    number --;
+  } return sums;
+}
+
+let factor = (number) =>{
+  let factorNum = 1;
+  for (let i = 1; i <= number; i++){
+    factorNum *= i;
+  } return factorNum;
+}
+
 
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
