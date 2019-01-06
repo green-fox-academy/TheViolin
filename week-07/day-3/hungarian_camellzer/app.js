@@ -7,11 +7,11 @@ app.use(express.json());
 
 app.post('/translate', (req, res) => {
   const { lang, text } = req.body;
-    if (lang === "hu") {
-      res.json({
-        "translated": translate(text),
-        "lang": "teve"
-      })
+  if (lang === "hu") {
+    res.json({
+      "translated": translate(text),
+      "lang": "teve"
+    })
   } else {
     res.json({
       "error": "I can't translate that!"
