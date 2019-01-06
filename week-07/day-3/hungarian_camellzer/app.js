@@ -2,6 +2,23 @@ const express = require('express');
 const port = 8080;
 const app = express();
 
+app.use('/assets', express.static('assets'));
+app.use(express.json());
+
+app.post('/translate', (req, res) => {
+  const { lang, text } = req.body;
+    if (lang === "hu") {
+      res.json({
+        "translated": translate(text),
+        "lang": "teve"
+      })
+  } else {
+    res.json({
+      "error": "I can't translate that!"
+    });
+  }
+});
+
 const isVowel = (character) => {
   let lowerCaseChar = character.toLowerCase();
   return ['a', 'á', 'u', 'ú', 'ü', 'ű', 'o', 'ó', 'ö', 'ő', 'e', 'é', 'i', 'í'].some(vowel => vowel === lowerCaseChar);
