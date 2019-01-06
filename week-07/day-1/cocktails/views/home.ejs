@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Cocktails</title>
-  </head>
-  <body>
-    <h1>Cocktail list</h1>
-      <% cocktails.forEach(function(item){ %>
-         <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><%= item.name %><br><%= item.contains %></td>
-              <td><%= item.price %> Ft</td>
-            </tr>
-          </tbody>
-        </table>
-      
-     <% }); %>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cocktails</title>
+</head>
+
+<body>
+  <h1>Cocktail list</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cocktails.forEach(e => { %>
+      <tr>
+        <td>
+          <%= e.name %>
+          <% if(e.isAlcoholic !== true) {%>
+          (non-alcoholic)
+          <% }%>
+          <br>
+          <%= e.contains %>
+        </td>
+        <td>
+          <%= e.price %> Ft
+        </td>
+        <% }); %>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 </html>
