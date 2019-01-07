@@ -25,6 +25,7 @@ button:active{
   filter: contrast(110%);
 }
 .container{
+  margin-top:154px;
   display:flex;
   justify-content: center;
   
