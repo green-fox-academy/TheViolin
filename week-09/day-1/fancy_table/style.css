@@ -3,24 +3,22 @@ html{
   height: 800px;
   background: #3E94EC;
 }
-body{
-  background: #9EA7AF;
-}
 table{
   font-family: 'Times New Roman', Times, serif;
-  font-style: unset;
+  font-weight: 200;
+  overflow: hidden;
+  border-style: hidden;
+  border-collapse: collapse;
 }
 table tr:first-child th:first-child {
   border-top-left-radius: 10px;
 }
-
 table tr:first-child th:last-child {
   border-top-right-radius: 10px;
 }
 table tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
 }
-
 table tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
@@ -39,6 +37,12 @@ td{
  width: 200px;
  height: 80px;
  padding-left: 30px;
+}
+th, td{
+  border: 1px solid rgba(97, 96, 96, 0.87);
+}
+thead{
+  border-bottom: 3px solid rgb(97, 96, 96);;
 
 }
 tbody{
@@ -49,4 +53,10 @@ tbody>tr:nth-child(2n){
 }
 tbody>tr:nth-child(2n+1) {
   background: #FFFFFF;
+}
+td[datacurrency]::before{
+  content: '$ ';
+}
+td[datacurrency]::after{
+  content: '.00';
 }
