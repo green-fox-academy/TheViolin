@@ -22,3 +22,9 @@
 .purple{
   background:#B02AFF;
 }
+
+@media screen and (max-width: 854px) {
+  .container{
+    flex-direction: column;
+  }
+}
